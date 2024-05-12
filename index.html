@@ -13,16 +13,27 @@
       background-size: cover;
       background-repeat: no-repeat;
     }
-    
+
     .img-container {
-      margin-top: 3vh;
-      margin-left: 25px;
-      border-radius: 25px; /* Rounded corners for the container */
-      overflow: hidden; /* Ensure the image respects the container's rounded corners */
+      margin-top: 20px;
+      margin-left: 40px;
     }
-    
+
     .img-container img {
-      border-radius: 50px; /* Rounded corners for the image */
+      height: auto;
+      border-radius: 25px;
+    }
+
+    .img-container1 {
+      margin-top: 20px;
+      margin-left: 40px;
+    }
+
+    .img-container1 img {
+      border-radius: 25px;
+      margin-top: -700px;
+      margin-left: 50px;
+      margin-bottom: 70px;
     }
     
     .container {
@@ -34,8 +45,19 @@
     }
     
     form {
-      margin-top: 100px; /* Add margin to create space between form and generate report */
+      margin-top: 40px; /* Add margin to create space between form and generate report */
       margin-left: 100px;
+      border: 2px solid #ccc; /* Add border to the form */
+      padding: 20px; /* Add padding to create space between the border and form elements */
+      background-color: #f0f0f0; /* Fill color inside the form */
+      border-radius: 25px;
+      width: 500px;
+    }
+
+    .form1 {
+      margin-top: 40px; /* Add margin to create space between form and generate report */
+      margin-left: -520px;
+      margin-bottom: 40px;
       border: 2px solid #ccc; /* Add border to the form */
       padding: 20px; /* Add padding to create space between the border and form elements */
       background-color: #f0f0f0; /* Fill color inside the form */
@@ -106,7 +128,7 @@
         input[type="submit"] {
             width: 100%;
             padding: 10px;
-            background-color:#1f9fb9;
+            background-color:#eb0db7;
             color: white;
             border: none;
             border-radius: 50px;
@@ -116,12 +138,12 @@
         }
 
         input[type="submit"]:hover {
-            background-color: #29d1f3;
+            background-color: #f94dd1;
         }
 
         h1 {
           text-align: center;
-          color: #1f9fb9;
+          color: #eb0db7;
           font-family: 'Brush Script MT', cursive;
           font-size: 60px;
         }
@@ -130,7 +152,7 @@
 </head>
 <body>
   <div class="img-container">
-    <img src="https://i.pinimg.com/564x/80/15/0d/80150daf355b741839c4234afb8bc5fa.jpg" alt="img1" height="650px" width="500px">
+    <img src="https://i.pinimg.com/564x/80/15/0d/80150daf355b741839c4234afb8bc5fa.jpg" alt="img1" height="350px" width="500px">
   </div>
   <div class="container">
   <form action="/login" method="post">
@@ -142,6 +164,22 @@
     <input type="submit"><br><br>
     <button type="submit"><a href="/report">Generate Report</a></button>
   </form>
+  <form action="/delete" method="post">
+    <h1>Delete</h1>
+    <input type="text" id="deleteRollno" name="rollno" placeholder="Roll no to delete"><br><br>
+    <input type="submit" value="Delete"><br><br>
+  </form>
+  <form class="form1" action="/update" method="post">
+    <h1>Update</h1>
+    <input type="text" id="updateName" name="name" placeholder="Name to update"><br><br>
+    <input type="text" id="updateRollno" name="rollno" placeholder="Roll no to update"><br><br>
+    <input type="email" id="updateEmailId" name="emailId" placeholder="New Email Id"><br><br>
+    <input type="number" id="updatePhno" name="phno" placeholder="New Phone no"><br><br>
+    <input type="submit" value="Update"><br><br>
+  </form>
+  <div class="img-container1">
+    <img src="https://i.pinimg.com/564x/bb/d6/72/bbd67287c3802fa22545db8185d604a1.jpg" alt="img1" height="520px" width="550px">
   </div>
+</div>
 </body>
 </html>
